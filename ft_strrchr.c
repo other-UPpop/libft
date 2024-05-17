@@ -6,7 +6,7 @@
 /*   By: rohta <rohta@student.42.jp>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 02:52:40 by rohta             #+#    #+#             */
-/*   Updated: 2024/05/14 18:33:08 by rohta            ###   ########.fr       */
+/*   Updated: 2024/05/16 11:39:00 by rohta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	*new_str;
+	unsigned char uc;
 
 	new_str = NULL;
-	if (c == '\0')
+	uc = c;
+	if (uc == '\0')
 	{
 		while (*s)
 		{
@@ -28,7 +30,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == uc)
 			new_str = s;
 		s++;
 	}

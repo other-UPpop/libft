@@ -6,7 +6,7 @@
 /*   By: rohta <rohta@student.42.jp>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 05:00:19 by rohta             #+#    #+#             */
-/*   Updated: 2024/05/14 18:33:05 by rohta            ###   ########.fr       */
+/*   Updated: 2024/05/17 17:20:46 by rohta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stddef.h>
 # include <stdlib.h>
+#include <limits.h>
 
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
