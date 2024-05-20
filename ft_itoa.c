@@ -6,37 +6,51 @@
 /*   By: rohta <rohta@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:23:03 by rohta             #+#    #+#             */
-/*   Updated: 2024/04/26 16:47:22 by rohta            ###   ########.fr       */
+/*   Updated: 2024/05/20 13:01:19 by rohta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-char	*ft_itoa(int n)
+size_t	ft_islen(long int n)
 {
-	int		i;
-	int		number;
-	int		numlen;
-	char	*numstr;
+	size_t	i;
 
-	number = n;
-	numlen = 0;
-	while (number)
+	i = 1;
+	if (n < 0)
+		n *= -1;
+	while (n >= 10)
 	{
-		number /= 10;
-		numlen++;
-	}
-	numstr = (char *)malloc((numlen + 1)*(sizeof(char)));
-	if (!numstr)
-		return (NULL);
-	i = 0;
-	while (number)
-	{
-		numstr[numlen - i - 1] = number % 10 + '0';
-		number /= 10;
+		n /= 10;
 		i++;
 	}
-	numstr[numlen] = '\0';
-	return (numstr);
+	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	long int	num;
+	size_t		len;
+	char		*s;
+
+	num = n;
+	len = ft_islen(num);
+	if (n < 0)
+	{
+		num *= -1;
+		len++;
+	}
+	s = (char *)malloc(sizeof(char) * (len + 1));
+	if (!s)
+		return (NULL);
+	s[len] = '\0';
+	while (len--)
+	{
+		s[len] = num % 10 + '0';
+		num /= 10;
+	}
+	if (n < 0)
+		s[0] = '-';
+	return (s);
 }
