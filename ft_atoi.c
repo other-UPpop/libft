@@ -6,13 +6,13 @@
 /*   By: rohta <rohta@student.42.jp>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 04:36:47 by rohta             #+#    #+#             */
-/*   Updated: 2024/05/19 22:30:19 by rohta            ###   ########.fr       */
+/*   Updated: 2024/05/22 18:17:00 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_issign(const char **str)
+static int	ft_issign(const char **str)
 {
 	int	i;
 	int	sign;
@@ -33,7 +33,7 @@ int	ft_issign(const char **str)
 	return (1);
 }
 
-int	ft_isover_max(long int num, const char *str)
+static int	ft_isover_max(long int num, const char *str)
 {
 	if (num > LONG_MAX / 10)
 		return (1);
@@ -43,7 +43,7 @@ int	ft_isover_max(long int num, const char *str)
 	return (0);
 }
 
-int	ft_isover_min(long int num, const char *str)
+static int	ft_isover_min(long int num, const char *str)
 {
 	num *= -1;
 	if (num < LONG_MIN / 10)

@@ -6,13 +6,13 @@
 /*   By: rohta <rohta@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 12:27:32 by rohta             #+#    #+#             */
-/*   Updated: 2024/05/20 11:35:06 by rohta            ###   ########.fr       */
+/*   Updated: 2024/05/24 12:27:47 by rohta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_iscount(const char *s, char c)
+static size_t	ft_iscount(const char *s, char c)
 {
 	size_t	len;
 
@@ -31,7 +31,7 @@ size_t	ft_iscount(const char *s, char c)
 	return (len);
 }
 
-void	*ft_memfree(char **s, int c)
+static void	*ft_memfree(char **s, int c)
 {
 	int	i;
 
@@ -45,7 +45,7 @@ void	*ft_memfree(char **s, int c)
 	return (NULL);
 }
 
-char	**ft_nullck(char **str, size_t i)
+static char	**ft_nullck(char **str, size_t i)
 {
 	if (str[i] == NULL)
 	{
@@ -55,7 +55,7 @@ char	**ft_nullck(char **str, size_t i)
 	return (str);
 }
 
-char	**ft_isword(const char *s, char **str, char c)
+static char	**ft_isword(const char *s, char **str, char c)
 {
 	const char	*start;
 	size_t		i;

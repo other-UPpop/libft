@@ -6,14 +6,13 @@
 /*   By: rohta <rohta@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:23:03 by rohta             #+#    #+#             */
-/*   Updated: 2024/05/20 13:01:19 by rohta            ###   ########.fr       */
+/*   Updated: 2024/05/22 18:32:08 by rohta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
-size_t	ft_islen(long int n)
+static size_t	ft_islen(long int n)
 {
 	size_t	i;
 
