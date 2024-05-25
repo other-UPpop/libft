@@ -6,7 +6,7 @@
 /*   By: rohta <rohta@student.42.jp>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:11:14 by rohta             #+#    #+#             */
-/*   Updated: 2024/05/18 16:54:25 by user             ###   ########.fr       */
+/*   Updated: 2024/05/25 16:15:47 by rohta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,10 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*memory;
 
-	if (count == 0 || size == 0 || count > SIZE_MAX / size)
-	{
-		memory = (void *)malloc(1);
-		if (memory == NULL)
-			return (NULL);
-		if (count == 0 || size == 0)
-			return (memory);
+	if (count > SIZE_MAX / size)
 		return (NULL);
-	}
+	if (count == 0 || size == 0)
+		return (malloc(0));
 	memory = (void *)malloc(count * size);
 	if (memory == NULL)
 		return (NULL);

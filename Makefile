@@ -6,7 +6,7 @@
 #    By: rohta <rohta@student.42.jp>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/20 06:33:59 by rohta             #+#    #+#              #
-#    Updated: 2024/05/21 20:39:07 by rohta            ###   ########.fr        #
+#    Updated: 2024/05/22 15:20:48 by user             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,12 @@ OBJ = $(SRC:.c=.o)
 
 BONUS_OBJ = $(BONUS:.c=.o)
 
+ifeq ($(MAKECMDGOALS),bonus)
+    OBJS = $(OBJ) $(BONUS_OBJ)
+else
+    OBJS = $(OBJ)
+endif
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -43,7 +49,7 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean $(NAME)
+re: fclean all 
 
 bonus : $(OBJ) $(BONUS_OBJ)
 	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
