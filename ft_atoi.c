@@ -6,7 +6,7 @@
 /*   By: rohta <rohta@student.42.jp>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 04:36:47 by rohta             #+#    #+#             */
-/*   Updated: 2024/05/22 18:17:00 by user             ###   ########.fr       */
+/*   Updated: 2024/05/25 19:41:49 by rohta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_issign(const char **str)
 {
-	int	i;
-	int	sign;
+	int		sign;
+	size_t	i;
 
 	sign = 0;
 	i = 0;

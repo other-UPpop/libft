@@ -6,7 +6,7 @@
 /*   By: rohta <rohta@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 12:27:32 by rohta             #+#    #+#             */
-/*   Updated: 2024/05/24 12:27:47 by rohta            ###   ########.fr       */
+/*   Updated: 2024/05/25 19:38:09 by rohta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ static size_t	ft_iscount(const char *s, char c)
 	return (len);
 }
 
-static void	*ft_memfree(char **s, int c)
+static void	*ft_memfree(char **s, size_t c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < c)

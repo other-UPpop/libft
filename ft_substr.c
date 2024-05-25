@@ -6,7 +6,7 @@
 /*   By: rohta <rohta@student.42.jp>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 13:13:56 by rohta             #+#    #+#             */
-/*   Updated: 2024/05/19 21:31:47 by rohta            ###   ########.fr       */
+/*   Updated: 2024/05/25 19:40:20 by rohta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char		*str;
-	int			str_sublen;
+	size_t		str_sublen;
 	size_t		str_len;
 
 	if (s == NULL)
