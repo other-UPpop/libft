@@ -6,7 +6,7 @@
 #    By: rohta <rohta@student.42.jp>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/20 06:33:59 by rohta             #+#    #+#              #
-#    Updated: 2024/05/22 15:20:48 by user             ###   ########.fr        #
+#    Updated: 2024/11/12 14:13:45 by rohta            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c\
 	  ft_strlen.c ft_strncmp.c ft_tolower.c ft_toupper.c ft_atoi.c ft_bzero.c\
 	  ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c\
 	  ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c\
-	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_long_atoi.c
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
 	  ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
