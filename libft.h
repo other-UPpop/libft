@@ -6,7 +6,7 @@
 /*   By: rohta <rohta@student.42.jp>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 05:00:19 by rohta             #+#    #+#             */
-/*   Updated: 2024/11/13 16:06:50 by rohta            ###   ########.fr       */
+/*   Updated: 2024/11/20 16:07:12 by rohta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@
 #  define UP_HEX "0123456789ABCDEF"
 # endif
 
-typedef struct s_list
-{
-	void					*content;
-	struct s_list			*next;
-}	t_list;
+//typedef struct s_list
+//{
+//	void					*content;
+//	struct s_list			*next;
+//}	l_list;
 
 typedef struct s_flags
 {
@@ -113,15 +113,15 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new_node);
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new_node);
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+//t_list	*ft_lstnew(void *content);
+//void	ft_lstadd_front(t_list **lst, t_list *new_node);
+//int		ft_lstsize(t_list *lst);
+//t_list	*ft_lstlast(t_list *lst);
+//void	ft_lstadd_back(t_list **lst, t_list *new_node);
+//void	ft_lstdelone(t_list *lst, void (*del)(void *));
+//void	ft_lstclear(t_list **lst, void (*del)(void *));
+//void	ft_lstiter(t_list *lst, void (*f)(void *));
+//t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 char	*get_next_line(int fd);
 char	*get_next_line_bonus(int fd);
